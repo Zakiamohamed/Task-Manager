@@ -1,0 +1,584 @@
+{
+  "version": "3",
+  "packages": {
+    "specifiers": {
+      "jsr:@db/sqlite": "jsr:@db/sqlite@0.13.0",
+      "jsr:@denosaurs/plug@1": "jsr:@denosaurs/plug@1.1.0",
+      "jsr:@oak/commons@^1.0": "jsr:@oak/commons@1.0.1",
+      "jsr:@std/assert@^1.0": "jsr:@std/assert@1.0.16",
+      "jsr:@std/bytes@^1.0": "jsr:@std/bytes@1.0.6",
+      "jsr:@std/crypto@^1.0": "jsr:@std/crypto@1.0.5",
+      "jsr:@std/encoding@^1": "jsr:@std/encoding@1.0.10",
+      "jsr:@std/encoding@^1.0": "jsr:@std/encoding@1.0.10",
+      "jsr:@std/encoding@^1.0.10": "jsr:@std/encoding@1.0.10",
+      "jsr:@std/fmt@^1": "jsr:@std/fmt@1.0.8",
+      "jsr:@std/fs@^1": "jsr:@std/fs@1.0.20",
+      "jsr:@std/http@^1.0": "jsr:@std/http@1.0.22",
+      "jsr:@std/internal@^1.0.12": "jsr:@std/internal@1.0.12",
+      "jsr:@std/media-types@^1.0": "jsr:@std/media-types@1.1.0",
+      "jsr:@std/path@1.0": "jsr:@std/path@1.0.9",
+      "jsr:@std/path@^1": "jsr:@std/path@1.1.3",
+      "jsr:@std/path@^1.0": "jsr:@std/path@1.1.3",
+      "jsr:@std/path@^1.1.3": "jsr:@std/path@1.1.3",
+      "npm:@types/node": "npm:@types/node@18.16.19",
+      "npm:bcrypt": "npm:bcrypt@6.0.0",
+      "npm:bcryptjs": "npm:bcryptjs@3.0.3",
+      "npm:better-sqlite3": "npm:better-sqlite3@12.4.6",
+      "npm:drizzle-orm": "npm:drizzle-orm@0.44.7",
+      "npm:jose": "npm:jose@6.1.2",
+      "npm:path-to-regexp@^6.3.0": "npm:path-to-regexp@6.3.0"
+    },
+    "jsr": {
+      "@db/sqlite@0.13.0": {
+        "dependencies": [
+          "jsr:@denosaurs/plug@1",
+          "jsr:@std/path@1.0"
+        ]
+      },
+      "@denosaurs/plug@1.1.0": {
+        "dependencies": [
+          "jsr:@std/encoding@^1",
+          "jsr:@std/fmt@^1",
+          "jsr:@std/fs@^1",
+          "jsr:@std/path@^1"
+        ]
+      },
+      "@oak/commons@1.0.1": {
+        "dependencies": [
+          "jsr:@std/assert@^1.0",
+          "jsr:@std/bytes@^1.0",
+          "jsr:@std/crypto@^1.0",
+          "jsr:@std/encoding@^1.0",
+          "jsr:@std/http@^1.0",
+          "jsr:@std/media-types@^1.0"
+        ]
+      },
+      "@std/assert@1.0.16": {},
+      "@std/bytes@1.0.6": {},
+      "@std/crypto@1.0.5": {},
+      "@std/encoding@1.0.10": {},
+      "@std/fmt@1.0.8": {},
+      "@std/fs@1.0.20": {
+        "dependencies": [
+          "jsr:@std/internal@^1.0.12",
+          "jsr:@std/path@^1.1.3"
+        ]
+      },
+      "@std/http@1.0.22": {
+        "dependencies": [
+          "jsr:@std/encoding@^1.0.10"
+        ]
+      },
+      "@std/internal@1.0.12": {},
+      "@std/media-types@1.1.0": {},
+      "@std/path@1.0.9": {},
+      "@std/path@1.1.3": {
+        "dependencies": [
+          "jsr:@std/internal@^1.0.12"
+        ]
+      }
+    },
+    "npm": {
+      "@types/node@18.16.19": {
+        "integrity": "sha512-IXl7o+R9iti9eBW4Wg2hx1xQDig183jj7YLn8F7udNceyfkbn1ZxmzZXuak20gR40D7pIkIY1kYGx5VIGbaHKA==",
+        "dependencies": {}
+      },
+      "base64-js@1.5.1": {
+        "integrity": "sha512-AKpaYlHn8t4SVbOHCy+b5+KKgvR4vrsD8vbvrbiQJps7fKDTkjkDry6ji0rUJjC0kzbNePLwzxq8iypo41qeWA==",
+        "dependencies": {}
+      },
+      "bcrypt@6.0.0": {
+        "integrity": "sha512-cU8v/EGSrnH+HnxV2z0J7/blxH8gq7Xh2JFT6Aroax7UohdmiJJlxApMxtKfuI7z68NvvVcmR78k2LbT6efhRg==",
+        "dependencies": {
+          "node-addon-api": "node-addon-api@8.5.0",
+          "node-gyp-build": "node-gyp-build@4.8.4"
+        }
+      },
+      "bcryptjs@3.0.3": {
+        "integrity": "sha512-GlF5wPWnSa/X5LKM1o0wz0suXIINz1iHRLvTS+sLyi7XPbe5ycmYI3DlZqVGZZtDgl4DmasFg7gOB3JYbphV5g==",
+        "dependencies": {}
+      },
+      "better-sqlite3@12.4.6": {
+        "integrity": "sha512-gaYt9yqTbQ1iOxLpJA8FPR5PiaHP+jlg8I5EX0Rs2KFwNzhBsF40KzMZS5FwelY7RG0wzaucWdqSAJM3uNCPCg==",
+        "dependencies": {
+          "bindings": "bindings@1.5.0",
+          "prebuild-install": "prebuild-install@7.1.3"
+        }
+      },
+      "bindings@1.5.0": {
+        "integrity": "sha512-p2q/t/mhvuOj/UeLlV6566GD/guowlr0hHxClI0W9m7MWYkL1F0hLo+0Aexs9HSPCtR1SXQ0TD3MMKrXZajbiQ==",
+        "dependencies": {
+          "file-uri-to-path": "file-uri-to-path@1.0.0"
+        }
+      },
+      "bl@4.1.0": {
+        "integrity": "sha512-1W07cM9gS6DcLperZfFSj+bWLtaPGSOHWhPiGzXmvVJbRLdG82sH/Kn8EtW1VqWVA54AKf2h5k5BbnIbwF3h6w==",
+        "dependencies": {
+          "buffer": "buffer@5.7.1",
+          "inherits": "inherits@2.0.4",
+          "readable-stream": "readable-stream@3.6.2"
+        }
+      },
+      "buffer@5.7.1": {
+        "integrity": "sha512-EHcyIPBQ4BSGlvjB16k5KgAJ27CIsHY/2JBmCRReo48y9rQ3MaUzWX3KVlBa4U7MyX02HdVj0K7C3WaB3ju7FQ==",
+        "dependencies": {
+          "base64-js": "base64-js@1.5.1",
+          "ieee754": "ieee754@1.2.1"
+        }
+      },
+      "chownr@1.1.4": {
+        "integrity": "sha512-jJ0bqzaylmJtVnNgzTeSOs8DPavpbYgEr/b0YL8/2GO3xJEhInFmhKMUnEJQjZumK7KXGFhUy89PrsJWlakBVg==",
+        "dependencies": {}
+      },
+      "decompress-response@6.0.0": {
+        "integrity": "sha512-aW35yZM6Bb/4oJlZncMH2LCoZtJXTRxES17vE3hoRiowU2kWHaJKFkSBDnDR+cm9J+9QhXmREyIfv0pji9ejCQ==",
+        "dependencies": {
+          "mimic-response": "mimic-response@3.1.0"
+        }
+      },
+      "deep-extend@0.6.0": {
+        "integrity": "sha512-LOHxIOaPYdHlJRtCQfDIVZtfw/ufM8+rVj649RIHzcm/vGwQRXFt6OPqIFWsm2XEMrNIEtWR64sY1LEKD2vAOA==",
+        "dependencies": {}
+      },
+      "detect-libc@2.1.2": {
+        "integrity": "sha512-Btj2BOOO83o3WyH59e8MgXsxEQVcarkUOpEYrubB0urwnN10yQ364rsiByU11nZlqWYZm05i/of7io4mzihBtQ==",
+        "dependencies": {}
+      },
+      "drizzle-orm@0.44.7": {
+        "integrity": "sha512-quIpnYznjU9lHshEOAYLoZ9s3jweleHlZIAWR/jX9gAWNg/JhQ1wj0KGRf7/Zm+obRrYd9GjPVJg790QY9N5AQ==",
+        "dependencies": {}
+      },
+      "end-of-stream@1.4.5": {
+        "integrity": "sha512-ooEGc6HP26xXq/N+GCGOT0JKCLDGrq2bQUZrQ7gyrJiZANJ/8YDTxTpQBXGMn+WbIQXNVpyWymm7KYVICQnyOg==",
+        "dependencies": {
+          "once": "once@1.4.0"
+        }
+      },
+      "expand-template@2.0.3": {
+        "integrity": "sha512-XYfuKMvj4O35f/pOXLObndIRvyQ+/+6AhODh+OKWj9S9498pHHn/IMszH+gt0fBCRWMNfk1ZSp5x3AifmnI2vg==",
+        "dependencies": {}
+      },
+      "file-uri-to-path@1.0.0": {
+        "integrity": "sha512-0Zt+s3L7Vf1biwWZ29aARiVYLx7iMGnEUl9x33fbB/j3jR81u/O2LbqK+Bm1CDSNDKVtJ/YjwY7TUd5SkeLQLw==",
+        "dependencies": {}
+      },
+      "fs-constants@1.0.0": {
+        "integrity": "sha512-y6OAwoSIf7FyjMIv94u+b5rdheZEjzR63GTyZJm5qh4Bi+2YgwLCcI/fPFZkL5PSixOt6ZNKm+w+Hfp/Bciwow==",
+        "dependencies": {}
+      },
+      "github-from-package@0.0.0": {
+        "integrity": "sha512-SyHy3T1v2NUXn29OsWdxmK6RwHD+vkj3v8en8AOBZ1wBQ/hCAQ5bAQTD02kW4W9tUp/3Qh6J8r9EvntiyCmOOw==",
+        "dependencies": {}
+      },
+      "ieee754@1.2.1": {
+        "integrity": "sha512-dcyqhDvX1C46lXZcVqCpK+FtMRQVdIMN6/Df5js2zouUsqG7I6sFxitIC+7KYK29KdXOLHdu9zL4sFnoVQnqaA==",
+        "dependencies": {}
+      },
+      "inherits@2.0.4": {
+        "integrity": "sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==",
+        "dependencies": {}
+      },
+      "ini@1.3.8": {
+        "integrity": "sha512-JV/yugV2uzW5iMRSiZAyDtQd+nxtUnjeLt0acNdw98kKLrvuRVyB80tsREOE7yvGVgalhZ6RNXCmEHkUKBKxew==",
+        "dependencies": {}
+      },
+      "jose@6.1.2": {
+        "integrity": "sha512-MpcPtHLE5EmztuFIqB0vzHAWJPpmN1E6L4oo+kze56LIs3MyXIj9ZHMDxqOvkP38gBR7K1v3jqd4WU2+nrfONQ==",
+        "dependencies": {}
+      },
+      "mimic-response@3.1.0": {
+        "integrity": "sha512-z0yWI+4FDrrweS8Zmt4Ej5HdJmky15+L2e6Wgn3+iK5fWzb6T3fhNFq2+MeTRb064c6Wr4N/wv0DzQTjNzHNGQ==",
+        "dependencies": {}
+      },
+      "minimist@1.2.8": {
+        "integrity": "sha512-2yyAR8qBkN3YuheJanUpWC5U3bb5osDywNB8RzDVlDwDHbocAJveqqj1u8+SVD7jkWT4yvsHCpWqqWqAxb0zCA==",
+        "dependencies": {}
+      },
+      "mkdirp-classic@0.5.3": {
+        "integrity": "sha512-gKLcREMhtuZRwRAfqP3RFW+TK4JqApVBtOIftVgjuABpAtpxhPGaDcfvbhNvD0B8iD1oUr/txX35NjcaY6Ns/A==",
+        "dependencies": {}
+      },
+      "napi-build-utils@2.0.0": {
+        "integrity": "sha512-GEbrYkbfF7MoNaoh2iGG84Mnf/WZfB0GdGEsM8wz7Expx/LlWf5U8t9nvJKXSp3qr5IsEbK04cBGhol/KwOsWA==",
+        "dependencies": {}
+      },
+      "node-abi@3.85.0": {
+        "integrity": "sha512-zsFhmbkAzwhTft6nd3VxcG0cvJsT70rL+BIGHWVq5fi6MwGrHwzqKaxXE+Hl2GmnGItnDKPPkO5/LQqjVkIdFg==",
+        "dependencies": {
+          "semver": "semver@7.7.3"
+        }
+      },
+      "node-addon-api@8.5.0": {
+        "integrity": "sha512-/bRZty2mXUIFY/xU5HLvveNHlswNJej+RnxBjOMkidWfwZzgTbPG1E3K5TOxRLOR+5hX7bSofy8yf1hZevMS8A==",
+        "dependencies": {}
+      },
+      "node-gyp-build@4.8.4": {
+        "integrity": "sha512-LA4ZjwlnUblHVgq0oBF3Jl/6h/Nvs5fzBLwdEF4nuxnFdsfajde4WfxtJr3CaiH+F6ewcIB/q4jQ4UzPyid+CQ==",
+        "dependencies": {}
+      },
+      "once@1.4.0": {
+        "integrity": "sha512-lNaJgI+2Q5URQBkccEKHTQOPaXdUxnZZElQTZY0MFUAuaEqe1E+Nyvgdz/aIyNi6Z9MzO5dv1H8n58/GELp3+w==",
+        "dependencies": {
+          "wrappy": "wrappy@1.0.2"
+        }
+      },
+      "path-to-regexp@6.3.0": {
+        "integrity": "sha512-Yhpw4T9C6hPpgPeA28us07OJeqZ5EzQTkbfwuhsUg0c237RomFoETJgmp2sa3F/41gfLE6G5cqcYwznmeEeOlQ==",
+        "dependencies": {}
+      },
+      "prebuild-install@7.1.3": {
+        "integrity": "sha512-8Mf2cbV7x1cXPUILADGI3wuhfqWvtiLA1iclTDbFRZkgRQS0NqsPZphna9V+HyTEadheuPmjaJMsbzKQFOzLug==",
+        "dependencies": {
+          "detect-libc": "detect-libc@2.1.2",
+          "expand-template": "expand-template@2.0.3",
+          "github-from-package": "github-from-package@0.0.0",
+          "minimist": "minimist@1.2.8",
+          "mkdirp-classic": "mkdirp-classic@0.5.3",
+          "napi-build-utils": "napi-build-utils@2.0.0",
+          "node-abi": "node-abi@3.85.0",
+          "pump": "pump@3.0.3",
+          "rc": "rc@1.2.8",
+          "simple-get": "simple-get@4.0.1",
+          "tar-fs": "tar-fs@2.1.4",
+          "tunnel-agent": "tunnel-agent@0.6.0"
+        }
+      },
+      "pump@3.0.3": {
+        "integrity": "sha512-todwxLMY7/heScKmntwQG8CXVkWUOdYxIvY2s0VWAAMh/nd8SoYiRaKjlr7+iCs984f2P8zvrfWcDDYVb73NfA==",
+        "dependencies": {
+          "end-of-stream": "end-of-stream@1.4.5",
+          "once": "once@1.4.0"
+        }
+      },
+      "rc@1.2.8": {
+        "integrity": "sha512-y3bGgqKj3QBdxLbLkomlohkvsA8gdAiUQlSBJnBhfn+BPxg4bc62d8TcBW15wavDfgexCgccckhcZvywyQYPOw==",
+        "dependencies": {
+          "deep-extend": "deep-extend@0.6.0",
+          "ini": "ini@1.3.8",
+          "minimist": "minimist@1.2.8",
+          "strip-json-comments": "strip-json-comments@2.0.1"
+        }
+      },
+      "readable-stream@3.6.2": {
+        "integrity": "sha512-9u/sniCrY3D5WdsERHzHE4G2YCXqoG5FTHUiCC4SIbr6XcLZBY05ya9EKjYek9O5xOAwjGq+1JdGBAS7Q9ScoA==",
+        "dependencies": {
+          "inherits": "inherits@2.0.4",
+          "string_decoder": "string_decoder@1.3.0",
+          "util-deprecate": "util-deprecate@1.0.2"
+        }
+      },
+      "safe-buffer@5.2.1": {
+        "integrity": "sha512-rp3So07KcdmmKbGvgaNxQSJr7bGVSVk5S9Eq1F+ppbRo70+YeaDxkw5Dd8NPN+GD6bjnYm2VuPuCXmpuYvmCXQ==",
+        "dependencies": {}
+      },
+      "semver@7.7.3": {
+        "integrity": "sha512-SdsKMrI9TdgjdweUSR9MweHA4EJ8YxHn8DFaDisvhVlUOe4BF1tLD7GAj0lIqWVl+dPb/rExr0Btby5loQm20Q==",
+        "dependencies": {}
+      },
+      "simple-concat@1.0.1": {
+        "integrity": "sha512-cSFtAPtRhljv69IK0hTVZQ+OfE9nePi/rtJmw5UjHeVyVroEqJXP1sFztKUy1qU+xvz3u/sfYJLa947b7nAN2Q==",
+        "dependencies": {}
+      },
+      "simple-get@4.0.1": {
+        "integrity": "sha512-brv7p5WgH0jmQJr1ZDDfKDOSeWWg+OVypG99A/5vYGPqJ6pxiaHLy8nxtFjBA7oMa01ebA9gfh1uMCFqOuXxvA==",
+        "dependencies": {
+          "decompress-response": "decompress-response@6.0.0",
+          "once": "once@1.4.0",
+          "simple-concat": "simple-concat@1.0.1"
+        }
+      },
+      "string_decoder@1.3.0": {
+        "integrity": "sha512-hkRX8U1WjJFd8LsDJ2yQ/wWWxaopEsABU1XfkM8A+j0+85JAGppt16cr1Whg6KIbb4okU6Mql6BOj+uup/wKeA==",
+        "dependencies": {
+          "safe-buffer": "safe-buffer@5.2.1"
+        }
+      },
+      "strip-json-comments@2.0.1": {
+        "integrity": "sha512-4gB8na07fecVVkOI6Rs4e7T6NOTki5EmL7TUduTs6bu3EdnSycntVJ4re8kgZA+wx9IueI2Y11bfbgwtzuE0KQ==",
+        "dependencies": {}
+      },
+      "tar-fs@2.1.4": {
+        "integrity": "sha512-mDAjwmZdh7LTT6pNleZ05Yt65HC3E+NiQzl672vQG38jIrehtJk/J3mNwIg+vShQPcLF/LV7CMnDW6vjj6sfYQ==",
+        "dependencies": {
+          "chownr": "chownr@1.1.4",
+          "mkdirp-classic": "mkdirp-classic@0.5.3",
+          "pump": "pump@3.0.3",
+          "tar-stream": "tar-stream@2.2.0"
+        }
+      },
+      "tar-stream@2.2.0": {
+        "integrity": "sha512-ujeqbceABgwMZxEJnk2HDY2DlnUZ+9oEcb1KzTVfYHio0UE6dG71n60d8D2I4qNvleWrrXpmjpt7vZeF1LnMZQ==",
+        "dependencies": {
+          "bl": "bl@4.1.0",
+          "end-of-stream": "end-of-stream@1.4.5",
+          "fs-constants": "fs-constants@1.0.0",
+          "inherits": "inherits@2.0.4",
+          "readable-stream": "readable-stream@3.6.2"
+        }
+      },
+      "tunnel-agent@0.6.0": {
+        "integrity": "sha512-McnNiV1l8RYeY8tBgEpuodCC1mLUdbSN+CYBL7kJsJNInOP8UjDDEwdk6Mw60vdLLrr5NHKZhMAOSrR2NZuQ+w==",
+        "dependencies": {
+          "safe-buffer": "safe-buffer@5.2.1"
+        }
+      },
+      "util-deprecate@1.0.2": {
+        "integrity": "sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==",
+        "dependencies": {}
+      },
+      "wrappy@1.0.2": {
+        "integrity": "sha512-l4Sp/DRseor9wL6EvV2+TuQn63dMkPjZ/sp9XkghTEbV9KlPS1xUsZ3u7/IQO4wxtcFB4bgpQPRcR3QCvezPcQ==",
+        "dependencies": {}
+      }
+    }
+  },
+  "redirects": {
+    "https://deno.land/x/bcrypt/mod.ts": "https://deno.land/x/bcrypt@v0.4.1/mod.ts",
+    "https://deno.land/x/oak/mod.ts": "https://deno.land/x/oak@v17.2.0/mod.ts"
+  },
+  "remote": {
+    "https://deno.land/std@0.200.0/assert/assert.ts": "9a97dad6d98c238938e7540736b826440ad8c1c1e54430ca4c4e623e585607ee",
+    "https://deno.land/std@0.200.0/assert/assertion_error.ts": "4d0bde9b374dfbcbe8ac23f54f567b77024fb67dbb1906a852d67fe050d42f56",
+    "https://deno.land/std@0.200.0/async/delay.ts": "a6142eb44cdd856b645086af2b811b1fcce08ec06bb7d50969e6a872ee9b8659",
+    "https://deno.land/std@0.200.0/bytes/concat.ts": "d26d6f3d7922e6d663dacfcd357563b7bf4a380ce5b9c2bbe0c8586662f25ce2",
+    "https://deno.land/std@0.200.0/crypto/_fnv/fnv32.ts": "e4649dfdefc5c987ed53c3c25db62db771a06d9d1b9c36d2b5cf0853b8e82153",
+    "https://deno.land/std@0.200.0/crypto/_fnv/fnv64.ts": "bfa0e4702061fdb490a14e6bf5f9168a22fb022b307c5723499469bfefca555e",
+    "https://deno.land/std@0.200.0/crypto/_fnv/mod.ts": "f956a95f58910f223e420340b7404702ecd429603acd4491fa77af84f746040c",
+    "https://deno.land/std@0.200.0/crypto/_fnv/util.ts": "accba12bfd80a352e32a872f87df2a195e75561f1b1304a4cb4f5a4648d288f9",
+    "https://deno.land/std@0.200.0/crypto/_wasm/lib/deno_std_wasm_crypto.generated.mjs": "85b50eee2e511584698c04f1d84155e57452ea963106fee64987c326e9e5d25d",
+    "https://deno.land/std@0.200.0/crypto/_wasm/mod.ts": "973058e70052c98292b567d1c8396dffc28d6dfc6a44f0763032f6fbdf5222f5",
+    "https://deno.land/std@0.200.0/crypto/crypto.ts": "731dffeb3054ddca38e6279a6ad718abef0fb6e218639c496d1c208db70e55e4",
+    "https://deno.land/std@0.200.0/crypto/timing_safe_equal.ts": "7b0a4d2ef1c17590e0ad6c0cb1776369d2ba80cd99e945005e117851690507fe",
+    "https://deno.land/std@0.200.0/http/server.ts": "1b2403b3c544c0624ad23e8ca4e05877e65380d9e0d75d04957432d65c3d5f41",
+    "https://deno.land/std@0.200.0/uuid/_common.ts": "cb1441f4df460571fc0919e1c5c217f3e7006189b703caf946604b3f791ae34d",
+    "https://deno.land/std@0.200.0/uuid/constants.ts": "0d0e95561343da44adb4a4edbc1f04cef48b0d75288c4d1704f58743f4a50d88",
+    "https://deno.land/std@0.200.0/uuid/mod.ts": "5c7ca252dddba1ddf0bca2dc1124328245272650c98251d71996bb9cd8f5a386",
+    "https://deno.land/std@0.200.0/uuid/v1.ts": "fe36009afce7ced96e1b5928565e12c5a8eb0df1a2b5063c0a72bda6b75c0de5",
+    "https://deno.land/std@0.200.0/uuid/v3.ts": "49bd2a5cd19f043c88777a8daeaa453f96cc586129af78863aa34dadf27d5fd0",
+    "https://deno.land/std@0.200.0/uuid/v4.ts": "0f081880c156fd59b9e44e2f84ea0f94a3627e89c224eaf6cc982b53d849f37e",
+    "https://deno.land/std@0.200.0/uuid/v5.ts": "a102f716fc8d31b7e7e4376b1e7d6a255c39858bda6e5f672a4bb3cbd67405d0",
+    "https://deno.land/std@0.205.0/encoding/_util.ts": "f368920189c4fe6592ab2e93bd7ded8f3065b84f95cd3e036a4a10a75649dcba",
+    "https://deno.land/std@0.205.0/encoding/base64.ts": "cc03110d6518170aeaa68ec97f89c6d6e2276294b30807e7332591d7ce2e4b72",
+    "https://deno.land/std@0.205.0/encoding/base64url.ts": "7608862858d28a003f9d6cb78dd61e645ecd1ae1f45faf0e09a306eafe66b16e",
+    "https://deno.land/std@0.210.0/assert/assert.ts": "e265ad50a9341f3b40e51dd4cb41ab253d976943ba78a977106950e52e0302ab",
+    "https://deno.land/std@0.210.0/assert/assertion_error.ts": "26ed1863d905005f00785c89750c001c3522c5417e4f58f95044b8143cfc1593",
+    "https://deno.land/std@0.210.0/bytes/concat.ts": "148a7575649e4a06246203f725f4878dce08690cc33c448f1000632e7a050449",
+    "https://deno.land/std@0.210.0/crypto/_fnv/fnv32.ts": "e4649dfdefc5c987ed53c3c25db62db771a06d9d1b9c36d2b5cf0853b8e82153",
+    "https://deno.land/std@0.210.0/crypto/_fnv/fnv64.ts": "bfa0e4702061fdb490a14e6bf5f9168a22fb022b307c5723499469bfefca555e",
+    "https://deno.land/std@0.210.0/crypto/_fnv/mod.ts": "f956a95f58910f223e420340b7404702ecd429603acd4491fa77af84f746040c",
+    "https://deno.land/std@0.210.0/crypto/_fnv/util.ts": "accba12bfd80a352e32a872f87df2a195e75561f1b1304a4cb4f5a4648d288f9",
+    "https://deno.land/std@0.210.0/crypto/_wasm/lib/deno_std_wasm_crypto.generated.mjs": "524b64057e4c1f0a4f65e9ec8cf7257a618e0f1fe326fa1e0bbff35444a7effb",
+    "https://deno.land/std@0.210.0/crypto/_wasm/mod.ts": "d7b7dc54bbd6b02c16cd08e8e3d30fa9aa9692efb112a7ab5d8595827b9a0234",
+    "https://deno.land/std@0.210.0/crypto/crypto.ts": "dc9a5bdcf0094c5e51c8185d011fcfc40a91ba3437629c4a231cc26c4af45a99",
+    "https://deno.land/std@0.210.0/uuid/_common.ts": "cb1441f4df460571fc0919e1c5c217f3e7006189b703caf946604b3f791ae34d",
+    "https://deno.land/std@0.210.0/uuid/constants.ts": "0d0e95561343da44adb4a4edbc1f04cef48b0d75288c4d1704f58743f4a50d88",
+    "https://deno.land/std@0.210.0/uuid/mod.ts": "5c7ca252dddba1ddf0bca2dc1124328245272650c98251d71996bb9cd8f5a386",
+    "https://deno.land/std@0.210.0/uuid/v1.ts": "fe36009afce7ced96e1b5928565e12c5a8eb0df1a2b5063c0a72bda6b75c0de5",
+    "https://deno.land/std@0.210.0/uuid/v3.ts": "397ad58daec8b5ef6ba7e94fe86c9bc56b194adcbe2f70ec40a1fb005203c870",
+    "https://deno.land/std@0.210.0/uuid/v4.ts": "0f081880c156fd59b9e44e2f84ea0f94a3627e89c224eaf6cc982b53d849f37e",
+    "https://deno.land/std@0.210.0/uuid/v5.ts": "9daaf769e487b512d25adf8e137e05ff2e3392d27f66d5b273ee28030ff7cd58",
+    "https://deno.land/std@0.224.0/async/delay.ts": "f90dd685b97c2f142b8069082993e437b1602b8e2561134827eeb7c12b95c499",
+    "https://deno.land/std@0.224.0/http/server.ts": "f9313804bf6467a1704f45f76cb6cd0a3396a3b31c316035e6a4c2035d1ea514",
+    "https://deno.land/x/bcrypt@v0.4.1/mod.ts": "ff09bdae282583cf5f7d87efe37ddcecef7f14f6d12e8b8066a3058db8c6c2f7",
+    "https://deno.land/x/bcrypt@v0.4.1/src/bcrypt/base64.ts": "b8266450a4f1eb6960f60f2f7986afc4dde6b45bd2d7ee7ba10789e67e17b9f7",
+    "https://deno.land/x/bcrypt@v0.4.1/src/bcrypt/bcrypt.ts": "ec221648cc6453ea5e3803bc817c01157dada06aa6f7a0ba6b9f87aae32b21e2",
+    "https://deno.land/x/bcrypt@v0.4.1/src/main.ts": "08d201b289c8d9c46f8839c69cd6625b213863db29775c7a200afc3b540e64f8",
+    "https://deno.land/x/djwt@v3.0.1/algorithm.ts": "b1c6645f9dbd6e6c47c123a3b18c28b956f91c65ed17f5b6d5d968fc3750542b",
+    "https://deno.land/x/djwt@v3.0.1/deps.ts": "c8b329dc18c54f93879699ffb728bd805d548f7c64c4d2916efa5fb2c712cc47",
+    "https://deno.land/x/djwt@v3.0.1/mod.ts": "eca176976595654b8a536e7b8029a029c435d079ef58feff2d3bde33ea107417",
+    "https://deno.land/x/djwt@v3.0.1/signature.ts": "a5649368a4b433b2810e7d47f53661fe3b0f7fe1778cb49234ceae3d6e861185",
+    "https://deno.land/x/djwt@v3.0.1/util.ts": "5cb264d2125c553678e11446bcfa0494025d120e3f59d0a3ab38f6800def697d",
+    "https://jsr.io/@db/sqlite/0.13.0/deno.json": "af433ce4acfadbc34264477fbd53a3c0268732484dd76afd7edc4b7d8f5a826c",
+    "https://jsr.io/@db/sqlite/0.13.0/deps.ts": "bb785da451d66042e14d45c18e980a4ad4de1c4c2889fbc34be2e5aa82e3c3ed",
+    "https://jsr.io/@db/sqlite/0.13.0/mod.ts": "3169f246c0eddd6ed82862758f4109f167b7ba5538236240fbb26a129f1bc16c",
+    "https://jsr.io/@db/sqlite/0.13.0/src/blob.ts": "cb860ca260fd0c3ac532f4571684707d5c86ad370fed92948d34adc5587bc5a1",
+    "https://jsr.io/@db/sqlite/0.13.0/src/constants.ts": "85fd27aa6e199093f25f5f437052e16fd0e0870b96ca9b24a98e04ddc8b7d006",
+    "https://jsr.io/@db/sqlite/0.13.0/src/database.ts": "7ee61897052bf6fe471b97b85c8ac0534effe79372ec0ee03097f8fe8824847e",
+    "https://jsr.io/@db/sqlite/0.13.0/src/ffi.ts": "27fbb2d6975bb9bd15742d48d8a6500ad57d8dda12e2e1538a452090358a6a0a",
+    "https://jsr.io/@db/sqlite/0.13.0/src/statement.ts": "258c67c07c9df31a81b95b5cc3de530d66ce98abe55975b4be35a25e68dd24f7",
+    "https://jsr.io/@db/sqlite/0.13.0/src/util.ts": "145413868f04821ef41e4f41fc5e8f52d7a69b0b90f98f05b2ef676b9935d4b2",
+    "https://jsr.io/@denosaurs/plug/1.1.0/download.ts": "c0ebb25562c476c43144bb653c16e4c6e64e41df3bf56fb992a19ae3e8e9cc62",
+    "https://jsr.io/@denosaurs/plug/1.1.0/mod.ts": "15c683abe87ed5df6cdccd5ff45ff46438ef68b825729f8463a6c8b605a9d19b",
+    "https://jsr.io/@denosaurs/plug/1.1.0/types.ts": "944a7abaded38515f0b06a4499d462c99d1c018ced7b33c2ee32607224e4e039",
+    "https://jsr.io/@denosaurs/plug/1.1.0/util.ts": "50bcec25c00d55f73810418f80f76389f212545f851da123dfa50198e28e6734",
+    "https://jsr.io/@std/encoding/1.0.10/_common16.ts": "719c734906af0c0f685283845287b4157ef027fb0aefbc5cda63ef063e557b36",
+    "https://jsr.io/@std/encoding/1.0.10/_common_detach.ts": "3e99655ca178a5bd0f7b30b361f1cb435edefb99f4d7130ceef3108c674a9430",
+    "https://jsr.io/@std/encoding/1.0.10/_types.ts": "65db521a1e83079110f20ee8121218b7485afd9223634f03934a36e80304ddac",
+    "https://jsr.io/@std/encoding/1.0.10/hex.ts": "97755a7eb8d0e9394edc43ee5d5fd1ef5f5e5361c0164cb211849430ed8e13be",
+    "https://jsr.io/@std/fmt/1.0.8/colors.ts": "1617e16c704274f0afcf3fefd16145e54082604a84833d0a42acece330fb92b4",
+    "https://jsr.io/@std/fs/1.0.20/_create_walk_entry.ts": "18a80b3234f414db7027da7ab1c17c3e9af100daadf76f5f6922df2ebbf01b9b",
+    "https://jsr.io/@std/fs/1.0.20/_get_file_info_type.ts": "c9dcd0bc71d2f52c7e24ab45622ea9d907dc3ab8b16a4541b4eefe106e850cda",
+    "https://jsr.io/@std/fs/1.0.20/_is_same_path.ts": "0919cf9d76211354dbb2e3cb50c72248733f989b96a218ad449ded250b9df7de",
+    "https://jsr.io/@std/fs/1.0.20/_is_subdir.ts": "32a96bec39c040b9b575ecfdcde1967b6e171bc96291c296d90726a5609c9744",
+    "https://jsr.io/@std/fs/1.0.20/_to_path_string.ts": "9f49cf880e71ce1f750d1840c7bb87b3fc58540f2976bbad30031d53bcc3f93e",
+    "https://jsr.io/@std/fs/1.0.20/copy.ts": "2f95310dd4d035d18dd52f167afcf5bf8b1d3eda08f551729ed334d9e602e8ea",
+    "https://jsr.io/@std/fs/1.0.20/empty_dir.ts": "9ff8e36104f4731cbc0b489d9d6f88527aafbd45e6f8fca70a1621fc64f63047",
+    "https://jsr.io/@std/fs/1.0.20/ensure_dir.ts": "50540018bca20786a0d7e231132bdf9b0f596a9099973dc8621ca8e9b5cfad55",
+    "https://jsr.io/@std/fs/1.0.20/ensure_file.ts": "7212e91bca24fe76f494462276c57561cf0292dfc9bd77a4b360bc1d6461aa27",
+    "https://jsr.io/@std/fs/1.0.20/ensure_link.ts": "45dc61217f9811c72a5e0e96ea126d15a88b77ee09e953e25e2e5c8d384d637f",
+    "https://jsr.io/@std/fs/1.0.20/ensure_symlink.ts": "c7de7dd37287985dc85b3c3157a32f6e7565c82b5c0a29ac8ee717b855485dbc",
+    "https://jsr.io/@std/fs/1.0.20/eol.ts": "f045da5a66c99630c6c849a05e80664b3d9c21f7c5fe317cf5c5aecfb9733d0f",
+    "https://jsr.io/@std/fs/1.0.20/exists.ts": "018cf1229af252d40b54f91dec08e9c31b73c97f2661b5149b6f5176749c4302",
+    "https://jsr.io/@std/fs/1.0.20/expand_glob.ts": "c0b249bf34655e622fe8487aaabc8253f0d3a8fb8044badae1f9588d5a729c6f",
+    "https://jsr.io/@std/fs/1.0.20/mod.ts": "0bf3344c1151d9b97fa836c6a4a0f93d38f924902f05051e1dec3fc33efe707c",
+    "https://jsr.io/@std/fs/1.0.20/move.ts": "71244d07426b6bd3c40881901fc62562e9f329c22e56b95e6a8736ce93535b72",
+    "https://jsr.io/@std/fs/1.0.20/walk.ts": "65966b5fea0c3345cdf5ab1fc3af4c324e634816605033dcd02185d5116127a4",
+    "https://jsr.io/@std/internal/1.0.12/_os.ts": "9ed3a0a8757a528fa8b48c4e4c353084e7c63171b0b891ef37e7433891671ac2",
+    "https://jsr.io/@std/internal/1.0.12/os.ts": "a36c71c4655eb4df2a212c2ec2a67de71b57116dee51ec9700c217f81d9c592e",
+    "https://jsr.io/@std/path/1.0.9/_common/assert_path.ts": "a949eb38fd4313b71f8a895be40288b5fa3b3bd1d83296fc668d2f5d5a592fce",
+    "https://jsr.io/@std/path/1.0.9/_common/basename.ts": "2a0216d60c7177522ff1e19c2f0f1ca277449b5c655dbb4acf86b52d26311776",
+    "https://jsr.io/@std/path/1.0.9/_common/common.ts": "dbf8f10e87289c474034b29d7a1318d401ce1b49e1696530abfc0b3d67015c1a",
+    "https://jsr.io/@std/path/1.0.9/_common/constants.ts": "ae184d036e3e972922a5cbee73b025a0ad5c36cb726980443e710d8d861b59a0",
+    "https://jsr.io/@std/path/1.0.9/_common/dirname.ts": "9bbe7bbf479962bb960ac1820147164c8e0dd5f6d80e1849012031da094d7330",
+    "https://jsr.io/@std/path/1.0.9/_common/format.ts": "97c05d7267d53d15d9c1de05f701bf936f3eada41b39ae1cc8bf6c274635dc38",
+    "https://jsr.io/@std/path/1.0.9/_common/from_file_url.ts": "5f6691894a61b2e582ce68ca4eb5124770bb17c6a6c18405e4436c015d3825d6",
+    "https://jsr.io/@std/path/1.0.9/_common/glob_to_reg_exp.ts": "7225c61a26dc00dddc0d9877d9116d7911c315d99df6a39c4eb79b99e6f22ac4",
+    "https://jsr.io/@std/path/1.0.9/_common/normalize.ts": "9bbe7bbf479962bb960ac1820147164c8e0dd5f6d80e1849012031da094d7330",
+    "https://jsr.io/@std/path/1.0.9/_common/normalize_string.ts": "360263fe94345b168bc807eeb99616b1cbc1b9b06180f833b3f9a12d1c257864",
+    "https://jsr.io/@std/path/1.0.9/_common/relative.ts": "870cfdfdb0c1d8149df108f0a691f4bbeee129ab30450e825cf117e04d954cca",
+    "https://jsr.io/@std/path/1.0.9/_common/strip_trailing_separators.ts": "991e42dc0fa9286bd4945f33401036e788a41d5770428e13f3019a349e9b5d44",
+    "https://jsr.io/@std/path/1.0.9/_common/to_file_url.ts": "0aee8fef92327c43a5f57cabf707a3229900941f35dfdec6ec75c5a42888774a",
+    "https://jsr.io/@std/path/1.0.9/_os.ts": "a12543163f3658040f3350b304885c72cc09503407324d49ab777cafd5bb5e59",
+    "https://jsr.io/@std/path/1.0.9/basename.ts": "b0b11a9e45912d0d57601a6459379a394cc4541a262a86133832dbb1e3edd844",
+    "https://jsr.io/@std/path/1.0.9/common.ts": "25c999b9b585b93ecd43ac114666ed84b7d4c7704d492a910cbd1106d0ec66da",
+    "https://jsr.io/@std/path/1.0.9/constants.ts": "53dbceb3549201dce1882993fb2e3129b7d4261b23da6ae3011423440ec24dd9",
+    "https://jsr.io/@std/path/1.0.9/dirname.ts": "466c946c945869c285f50d38d2722fa48eb67ca598ef3f5cb86b688f08f72679",
+    "https://jsr.io/@std/path/1.0.9/extname.ts": "ec11cd69eed57b0f3e76f56d12f8b082fadcc24d2c5744772178de786932de75",
+    "https://jsr.io/@std/path/1.0.9/format.ts": "e475d7b4e83a5f2beb64cf38223368bb4ae774d50ed88805e43cfb4744a90fa0",
+    "https://jsr.io/@std/path/1.0.9/from_file_url.ts": "6a3ab42fae39d5a125c81ad0ba8dad08748efb1b166750f143caed239b5067f3",
+    "https://jsr.io/@std/path/1.0.9/glob_to_regexp.ts": "4fbbf4583d6bf033cbc64b33f86f899a94e6a1eddce6baf73ba46a3eddb41564",
+    "https://jsr.io/@std/path/1.0.9/is_absolute.ts": "11dab3424f89df7939fb5c7722acbbb0a0a12c4b1fb90c97c8f987540bfa54a5",
+    "https://jsr.io/@std/path/1.0.9/is_glob.ts": "17424d5f73ec24adc7ee95f69579f8ff43694768ad8cb6f13e9231ea842ac01c",
+    "https://jsr.io/@std/path/1.0.9/join.ts": "de37d802f7797c36a6dd3344e70c251413c55f461fe00f87b25193ec2b1b5188",
+    "https://jsr.io/@std/path/1.0.9/join_globs.ts": "d08d0000b8a1e756ef97dceeffe6ad28b0c3e3db5d779eb614d486aaed42ddef",
+    "https://jsr.io/@std/path/1.0.9/mod.ts": "72250d4732af1bac4b4db4a40955b93a0a53c3cdd4858aee99570793157ebaed",
+    "https://jsr.io/@std/path/1.0.9/normalize.ts": "150279ab370772435a12a230ae0b6899f48b6d4b2cf0cb3eb462ffedefa85678",
+    "https://jsr.io/@std/path/1.0.9/normalize_glob.ts": "8a55d9c2527917d9ad0d4335172b284fd49265cd4199822324d4c139c566f2d3",
+    "https://jsr.io/@std/path/1.0.9/parse.ts": "40c6cb28143e5821348c683a5090029c5519bed3681331a869d54e12c0d8e4f8",
+    "https://jsr.io/@std/path/1.0.9/posix/_util.ts": "5ad9a97c8f7fb5bf83737f52df458e89fe643437442dae0c00b8ed3d953ed8c6",
+    "https://jsr.io/@std/path/1.0.9/posix/basename.ts": "c7ea8b847a1bf4272194cc61ad56dc5596771d3c7427d0ba8492fc5cd1d59ae5",
+    "https://jsr.io/@std/path/1.0.9/posix/constants.ts": "3d427a2135aa826a598ca74234c5523fcda84f91014e58785da20ce6ea0a360a",
+    "https://jsr.io/@std/path/1.0.9/posix/dirname.ts": "cffd04007383956f937155a2e98151e9751eef39655e722f7f73f8c593ddc322",
+    "https://jsr.io/@std/path/1.0.9/posix/extname.ts": "f819d2e6d2f13b6434de26ed256fcdac3727882211ab48a10e0c8fd76ef8156c",
+    "https://jsr.io/@std/path/1.0.9/posix/format.ts": "0839d13ba7c0dcf99b61889e24999393beb28e64e0e7cd657b14c799e5d0ea31",
+    "https://jsr.io/@std/path/1.0.9/posix/from_file_url.ts": "017ab37b52df68e46abc2331b30179c04ea45a4b435a583ba4e508db210c7b49",
+    "https://jsr.io/@std/path/1.0.9/posix/glob_to_regexp.ts": "aec729f2a468a5e0ef59b51bfd60356cd0d433eb3c1c1349682800fb2ad97a71",
+    "https://jsr.io/@std/path/1.0.9/posix/is_absolute.ts": "9c64861f75d3583b356e345a769b40893f0907144a061774a777c2d727a04e59",
+    "https://jsr.io/@std/path/1.0.9/posix/join.ts": "7b7edd1cc2eb8a3e39388deafa252de157ac7e19ed24e5b9c5a7ed42461e80ef",
+    "https://jsr.io/@std/path/1.0.9/posix/join_globs.ts": "cccb72fdd9732b893377d88841df0cd2fd8fbe0b7514bdb86dbb25344bc54342",
+    "https://jsr.io/@std/path/1.0.9/posix/normalize.ts": "3d455557dd2741e41ef0142b05a821b333890dade7664c4e69578e15e04eb770",
+    "https://jsr.io/@std/path/1.0.9/posix/normalize_glob.ts": "0bbc1e820097fff2b99b9b9f7c48235c57c166dd8f6605b18172a83cf0977de9",
+    "https://jsr.io/@std/path/1.0.9/posix/parse.ts": "4d3637b44fa273e7f6c216cc98e1981d7591e3b82c37bbcfa8b137ace49202d5",
+    "https://jsr.io/@std/path/1.0.9/posix/relative.ts": "8988ad9d430c4092bfc83d98932977b856134c170abc31c6aa08ee3d3aa7f13c",
+    "https://jsr.io/@std/path/1.0.9/posix/resolve.ts": "d4899ea37938b0563b041a76fab63b6558cc5f0d7d993c67ea1a206e63a472e9",
+    "https://jsr.io/@std/path/1.0.9/posix/to_file_url.ts": "8479595df5baeb7baef6bd49b7de98ea211155c6d177305c3ac03df6fb4a820c",
+    "https://jsr.io/@std/path/1.0.9/posix/to_namespaced_path.ts": "acbda3644bf5ee27ba1f8cb5adbce2bfc604d678d4a526bb5bfe6169deb6b3cc",
+    "https://jsr.io/@std/path/1.0.9/relative.ts": "8baef24c29c3aa3e941644975d4ab49fbe1a22f83d7df5831be363e0b9eb299e",
+    "https://jsr.io/@std/path/1.0.9/resolve.ts": "57dec9aac3c661384e933f8671b623ff434e7b60482b507f5f995033bf45533d",
+    "https://jsr.io/@std/path/1.0.9/to_file_url.ts": "612ed1c823b7a14b55ba948f45eb31cb902beaf8b5ffceb3331722babf140d21",
+    "https://jsr.io/@std/path/1.0.9/to_namespaced_path.ts": "b6dde836168ef02a0e5623cdbfe3de800653536c892e58af22672bdaed747f7e",
+    "https://jsr.io/@std/path/1.0.9/types.ts": "f1f5252fe764c61d273c7e21ae3b73ab564b6b0bf2883f391d19321f53950cce",
+    "https://jsr.io/@std/path/1.0.9/windows/_util.ts": "1736489bbe16fe334ac88a412039cbb16d302ea3164d72e1f5dad33b50ed3571",
+    "https://jsr.io/@std/path/1.0.9/windows/basename.ts": "1f948e4c867ebfb479efee16350dc78b9fc9a88ed874f8451cf085909d421f56",
+    "https://jsr.io/@std/path/1.0.9/windows/constants.ts": "82155c55b5efce25cbe0eeaaab0dd603718efe160325ee837ec17ed87017f97c",
+    "https://jsr.io/@std/path/1.0.9/windows/dirname.ts": "93dd7155e902a229589fea4b468b148a82f66cb173b45c488f1eb0029e71ffe7",
+    "https://jsr.io/@std/path/1.0.9/windows/extname.ts": "4ab66eb60ba4a81a99f1eda3754efd85e1696019a4b750c4de83a7f003a7eb76",
+    "https://jsr.io/@std/path/1.0.9/windows/format.ts": "4e4b936fc4063dd7f9af50830478cd58e7da6389b7b3d7998944a636cc996463",
+    "https://jsr.io/@std/path/1.0.9/windows/from_file_url.ts": "fe7f8251f2971d7c8220a4037a9a4c333b449f54ada48bbc6a306d08fb5aa1fe",
+    "https://jsr.io/@std/path/1.0.9/windows/glob_to_regexp.ts": "b32685fd05743538f8d075a9800601510e56d5741744711bef23130a49ac8575",
+    "https://jsr.io/@std/path/1.0.9/windows/is_absolute.ts": "7a07471c17af78576e5ca8f7a16682ee09480fbd05906248261a6a6e0b5c603f",
+    "https://jsr.io/@std/path/1.0.9/windows/join.ts": "b001b20bc70087d440a40e281de017fff2052cc13f18d02446e55df080749bb5",
+    "https://jsr.io/@std/path/1.0.9/windows/join_globs.ts": "fff524aec4c7fba515f1c6e0cb43e98340f84732ae04710bf8bfd0dd61fd68ac",
+    "https://jsr.io/@std/path/1.0.9/windows/normalize.ts": "b03269019bb49418867561d5aa54c638d69101ff250dfd5a215503ef43411ec4",
+    "https://jsr.io/@std/path/1.0.9/windows/normalize_glob.ts": "809bbe15a435df6dbe1e0f9bae0ceacf9c1c08bc428ff05dc616e1099330f401",
+    "https://jsr.io/@std/path/1.0.9/windows/parse.ts": "19322bd8f29f0c74d0903fce1a8dd50043613d7e0c30438ce66c27810e86b11f",
+    "https://jsr.io/@std/path/1.0.9/windows/relative.ts": "af97b3d073df5bdac2352597cde950c63a6888e37fc8a6239fd12d6f2b2e6a6b",
+    "https://jsr.io/@std/path/1.0.9/windows/resolve.ts": "2e86d85a44766505bd1408895d2edef2e4688368e15d1cc05a6f1b06dac2edd1",
+    "https://jsr.io/@std/path/1.0.9/windows/to_file_url.ts": "fdc100b7e7f4d3830ae0944f15244d363ecff14028ff3a71e2e34cce1f875b7f",
+    "https://jsr.io/@std/path/1.0.9/windows/to_namespaced_path.ts": "3347b0132c5263adbb31b14406789124b72cf7a5ef2579328bb823f95fb3229b",
+    "https://jsr.io/@std/path/1.1.3/_common/assert_path.ts": "a949eb38fd4313b71f8a895be40288b5fa3b3bd1d83296fc668d2f5d5a592fce",
+    "https://jsr.io/@std/path/1.1.3/_common/basename.ts": "2a0216d60c7177522ff1e19c2f0f1ca277449b5c655dbb4acf86b52d26311776",
+    "https://jsr.io/@std/path/1.1.3/_common/common.ts": "dbf8f10e87289c474034b29d7a1318d401ce1b49e1696530abfc0b3d67015c1a",
+    "https://jsr.io/@std/path/1.1.3/_common/constants.ts": "ae184d036e3e972922a5cbee73b025a0ad5c36cb726980443e710d8d861b59a0",
+    "https://jsr.io/@std/path/1.1.3/_common/dirname.ts": "9bbe7bbf479962bb960ac1820147164c8e0dd5f6d80e1849012031da094d7330",
+    "https://jsr.io/@std/path/1.1.3/_common/format.ts": "97c05d7267d53d15d9c1de05f701bf936f3eada41b39ae1cc8bf6c274635dc38",
+    "https://jsr.io/@std/path/1.1.3/_common/from_file_url.ts": "5f6691894a61b2e582ce68ca4eb5124770bb17c6a6c18405e4436c015d3825d6",
+    "https://jsr.io/@std/path/1.1.3/_common/glob_to_reg_exp.ts": "7225c61a26dc00dddc0d9877d9116d7911c315d99df6a39c4eb79b99e6f22ac4",
+    "https://jsr.io/@std/path/1.1.3/_common/normalize.ts": "9bbe7bbf479962bb960ac1820147164c8e0dd5f6d80e1849012031da094d7330",
+    "https://jsr.io/@std/path/1.1.3/_common/normalize_string.ts": "360263fe94345b168bc807eeb99616b1cbc1b9b06180f833b3f9a12d1c257864",
+    "https://jsr.io/@std/path/1.1.3/_common/relative.ts": "870cfdfdb0c1d8149df108f0a691f4bbeee129ab30450e825cf117e04d954cca",
+    "https://jsr.io/@std/path/1.1.3/_common/strip_trailing_separators.ts": "991e42dc0fa9286bd4945f33401036e788a41d5770428e13f3019a349e9b5d44",
+    "https://jsr.io/@std/path/1.1.3/_common/to_file_url.ts": "0aee8fef92327c43a5f57cabf707a3229900941f35dfdec6ec75c5a42888774a",
+    "https://jsr.io/@std/path/1.1.3/basename.ts": "d7536f74f149ce73941921cb6c9b7ad884b6e9af59c1c491c89e72e88053b499",
+    "https://jsr.io/@std/path/1.1.3/common.ts": "25c999b9b585b93ecd43ac114666ed84b7d4c7704d492a910cbd1106d0ec66da",
+    "https://jsr.io/@std/path/1.1.3/constants.ts": "e0f3bcb8588c9d310b7f65b359ef93107805f67d08d56a8d41d01eaf5b77f42b",
+    "https://jsr.io/@std/path/1.1.3/dirname.ts": "d4f107ade5329464d5d5573b00743be77efecd94667d98b5e3eb25862206dc68",
+    "https://jsr.io/@std/path/1.1.3/extname.ts": "95f996050900c9194fee994cafcd4461f49169461770b343150d36acdfa0c659",
+    "https://jsr.io/@std/path/1.1.3/format.ts": "323abdd0420a71d1531796578e4d6ef5c881ca34a1c877f629a2f638dbc7312b",
+    "https://jsr.io/@std/path/1.1.3/from_file_url.ts": "45ef7a962d6be8edce93715f40455748bafa3fbaa8a4ca89483ae5da81f37dc4",
+    "https://jsr.io/@std/path/1.1.3/glob_to_regexp.ts": "1773ead9eec9b3e7e638133389578c4b7c711461364c658e2d214b96e4b55f92",
+    "https://jsr.io/@std/path/1.1.3/is_absolute.ts": "c7db016c7f9d42203a041687c23e846720237b46b407dcee99c54ce22d5e9d00",
+    "https://jsr.io/@std/path/1.1.3/is_glob.ts": "739ece916b40350c331b8139be1fddcb6d36a04c916a01f3c84be37369c1e7ee",
+    "https://jsr.io/@std/path/1.1.3/join.ts": "ddda261ca887ac50264e02955ea2f074dca59a0f1da863860d1424ebe08c1e61",
+    "https://jsr.io/@std/path/1.1.3/join_globs.ts": "2587ae0d6a632c5d0afcb4055a8474dab0e7a1c4e673483e51743170ea437eac",
+    "https://jsr.io/@std/path/1.1.3/mod.ts": "72250d4732af1bac4b4db4a40955b93a0a53c3cdd4858aee99570793157ebaed",
+    "https://jsr.io/@std/path/1.1.3/normalize.ts": "13b3da2d8fd8097716f014876d4111803609ea7a7bc36856af2b0942da17a38f",
+    "https://jsr.io/@std/path/1.1.3/normalize_glob.ts": "414ea65b93c05ae431ae0af18893a62c35116611346549c3d60feb38928005b5",
+    "https://jsr.io/@std/path/1.1.3/parse.ts": "aa2de05b158f106d1aff78bd96fe1840ac02ef09a48f1ac06fb2802c6422f44f",
+    "https://jsr.io/@std/path/1.1.3/posix/_util.ts": "5ad9a97c8f7fb5bf83737f52df458e89fe643437442dae0c00b8ed3d953ed8c6",
+    "https://jsr.io/@std/path/1.1.3/posix/basename.ts": "d764b31543bcd6d597fe167b9043c9b477f212f2516fbd8bc6f3fba46d56757b",
+    "https://jsr.io/@std/path/1.1.3/posix/constants.ts": "3d427a2135aa826a598ca74234c5523fcda84f91014e58785da20ce6ea0a360a",
+    "https://jsr.io/@std/path/1.1.3/posix/dirname.ts": "175741d6d0b1addea4f9eafa73f65f3a7f543a71ef665c9322adf543b67204d5",
+    "https://jsr.io/@std/path/1.1.3/posix/extname.ts": "5fb7d036262c1b524f932cd2f1099523244a736ecaee01238338fd3f575c3883",
+    "https://jsr.io/@std/path/1.1.3/posix/format.ts": "0839d13ba7c0dcf99b61889e24999393beb28e64e0e7cd657b14c799e5d0ea31",
+    "https://jsr.io/@std/path/1.1.3/posix/from_file_url.ts": "017ab37b52df68e46abc2331b30179c04ea45a4b435a583ba4e508db210c7b49",
+    "https://jsr.io/@std/path/1.1.3/posix/glob_to_regexp.ts": "aec729f2a468a5e0ef59b51bfd60356cd0d433eb3c1c1349682800fb2ad97a71",
+    "https://jsr.io/@std/path/1.1.3/posix/is_absolute.ts": "9c64861f75d3583b356e345a769b40893f0907144a061774a777c2d727a04e59",
+    "https://jsr.io/@std/path/1.1.3/posix/join.ts": "1f505ad1b146d07121d2cf9ce5eee143547c8a33d63df3c725ea62529110c970",
+    "https://jsr.io/@std/path/1.1.3/posix/join_globs.ts": "cccb72fdd9732b893377d88841df0cd2fd8fbe0b7514bdb86dbb25344bc54342",
+    "https://jsr.io/@std/path/1.1.3/posix/normalize.ts": "df7eb7713ca84bec7421eca84a70bc75c2b2bfd81420e9fa2ff31ec416f98cf8",
+    "https://jsr.io/@std/path/1.1.3/posix/normalize_glob.ts": "0bbc1e820097fff2b99b9b9f7c48235c57c166dd8f6605b18172a83cf0977de9",
+    "https://jsr.io/@std/path/1.1.3/posix/parse.ts": "4d3637b44fa273e7f6c216cc98e1981d7591e3b82c37bbcfa8b137ace49202d5",
+    "https://jsr.io/@std/path/1.1.3/posix/relative.ts": "8988ad9d430c4092bfc83d98932977b856134c170abc31c6aa08ee3d3aa7f13c",
+    "https://jsr.io/@std/path/1.1.3/posix/resolve.ts": "d4899ea37938b0563b041a76fab63b6558cc5f0d7d993c67ea1a206e63a472e9",
+    "https://jsr.io/@std/path/1.1.3/posix/to_file_url.ts": "8479595df5baeb7baef6bd49b7de98ea211155c6d177305c3ac03df6fb4a820c",
+    "https://jsr.io/@std/path/1.1.3/posix/to_namespaced_path.ts": "acbda3644bf5ee27ba1f8cb5adbce2bfc604d678d4a526bb5bfe6169deb6b3cc",
+    "https://jsr.io/@std/path/1.1.3/relative.ts": "276dc67875eb5a08e3d857ef30f6e69d459bb5880c597efa7271805b48057bd3",
+    "https://jsr.io/@std/path/1.1.3/resolve.ts": "c09ae8b4b57ac7a8ea26577450b50754e04f4eaabefa078dd7683945f62b7e9b",
+    "https://jsr.io/@std/path/1.1.3/to_file_url.ts": "f2f0be4567456dad0a70ab4e049b3f9f85f27e9058fcf5a220d79743342b6e24",
+    "https://jsr.io/@std/path/1.1.3/to_namespaced_path.ts": "c61697874d4cf589c33b5c618f3d1239a8274f8d9baf85a3c913f31d72a9472c",
+    "https://jsr.io/@std/path/1.1.3/types.ts": "f1f5252fe764c61d273c7e21ae3b73ab564b6b0bf2883f391d19321f53950cce",
+    "https://jsr.io/@std/path/1.1.3/windows/_util.ts": "1736489bbe16fe334ac88a412039cbb16d302ea3164d72e1f5dad33b50ed3571",
+    "https://jsr.io/@std/path/1.1.3/windows/basename.ts": "137bd63c4d44f3dfbe4418d3045a91ba480fea64d7a5368e62de8a3744ca7e18",
+    "https://jsr.io/@std/path/1.1.3/windows/constants.ts": "82155c55b5efce25cbe0eeaaab0dd603718efe160325ee837ec17ed87017f97c",
+    "https://jsr.io/@std/path/1.1.3/windows/dirname.ts": "b791389b11527a1641e71b0d7ec4c5ee15cf08a833dfc5ad243ea8bc865f8ee1",
+    "https://jsr.io/@std/path/1.1.3/windows/extname.ts": "1b7f179efd9c032f51e1a64b5413c04823dc96755993e871a8940e5d08d0626c",
+    "https://jsr.io/@std/path/1.1.3/windows/format.ts": "4e4b936fc4063dd7f9af50830478cd58e7da6389b7b3d7998944a636cc996463",
+    "https://jsr.io/@std/path/1.1.3/windows/from_file_url.ts": "fe7f8251f2971d7c8220a4037a9a4c333b449f54ada48bbc6a306d08fb5aa1fe",
+    "https://jsr.io/@std/path/1.1.3/windows/glob_to_regexp.ts": "b32685fd05743538f8d075a9800601510e56d5741744711bef23130a49ac8575",
+    "https://jsr.io/@std/path/1.1.3/windows/is_absolute.ts": "7a07471c17af78576e5ca8f7a16682ee09480fbd05906248261a6a6e0b5c603f",
+    "https://jsr.io/@std/path/1.1.3/windows/join.ts": "4312965aa0c9f49a59eb2289130c9b16de56aaed746ea8d3c6d03dd3b98c63a2",
+    "https://jsr.io/@std/path/1.1.3/windows/join_globs.ts": "fff524aec4c7fba515f1c6e0cb43e98340f84732ae04710bf8bfd0dd61fd68ac",
+    "https://jsr.io/@std/path/1.1.3/windows/normalize.ts": "2d07ee62fa219ad3c20faf8ce855b0a4cba95800fad457f15d4a7b0954bbe72d",
+    "https://jsr.io/@std/path/1.1.3/windows/normalize_glob.ts": "809bbe15a435df6dbe1e0f9bae0ceacf9c1c08bc428ff05dc616e1099330f401",
+    "https://jsr.io/@std/path/1.1.3/windows/parse.ts": "19322bd8f29f0c74d0903fce1a8dd50043613d7e0c30438ce66c27810e86b11f",
+    "https://jsr.io/@std/path/1.1.3/windows/relative.ts": "af97b3d073df5bdac2352597cde950c63a6888e37fc8a6239fd12d6f2b2e6a6b",
+    "https://jsr.io/@std/path/1.1.3/windows/resolve.ts": "2e86d85a44766505bd1408895d2edef2e4688368e15d1cc05a6f1b06dac2edd1",
+    "https://jsr.io/@std/path/1.1.3/windows/to_file_url.ts": "fdc100b7e7f4d3830ae0944f15244d363ecff14028ff3a71e2e34cce1f875b7f",
+    "https://jsr.io/@std/path/1.1.3/windows/to_namespaced_path.ts": "3347b0132c5263adbb31b14406789124b72cf7a5ef2579328bb823f95fb3229b"
+  },
+  "workspace": {
+    "dependencies": [
+      "jsr:@db/sqlite@^0.11.0",
+      "jsr:@std/http@^1.0.6",
+      "jsr:@std/uuid@^1.0.3"
+    ],
+    "packageJson": {
+      "dependencies": [
+        "npm:react-dom@^19.1.1",
+        "npm:react@^19.1.1",
+        "npm:vite@^5.0.0"
+      ]
+    }
+  }
+}
